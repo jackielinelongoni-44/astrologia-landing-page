@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head> 
-  <img src="logo.png" alt="Logo Café com Pimenta" width="180" style="border-radius: 50%;">
-  <h1>Café com Pimenta</h1>
-  <nav>
-    <a href="#intro">Início</a>
-    <a href="#bio">BIO</a>
-    <a href="#conteudo">Conteúdo</a>
-  </nav>
-</header>
-
+<head>
   <meta charset="UTF-8">
   <title>Café com Pimenta - Astrologia e Astronomia</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* Fundo roxinho fofo com estrelas */
     body {
@@ -42,12 +33,13 @@
     header {
       text-align: center;
       padding: 30px;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
     }
 
     header h1 {
       color: #ffcc00;
       font-size: 2.5em;
+      margin-top: 10px;
     }
 
     nav a {
@@ -55,18 +47,55 @@
       color: #f9f9f9;
       text-decoration: none;
       font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Estilo para o Menu de Categorias */
+    .menu-categorias {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .cat-btn {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 1px solid #ffcc00;
+      color: #ffcc00;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .cat-btn:hover {
+      background: #ffcc00;
+      color: #3a0ca3;
+    }
+
+    main {
+      padding: 20px;
     }
 
     section {
       max-width: 800px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 30px;
       background: rgba(0,0,0,0.4);
-      border-radius: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     h2 {
       color: #ffcc00;
+      border-bottom: 1px solid rgba(255,204,0,0.3);
+      padding-bottom: 10px;
     }
 
     h3 {
@@ -84,8 +113,8 @@
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.4);
+      padding: 40px;
+      background: rgba(0,0,0,0.6);
       margin-top: 40px;
       color: #f9f9f9;
     }
@@ -95,42 +124,55 @@
   <div class="stars"></div>
 
   <header>
+    <img src="logo.png" alt="Logo Café com Pimenta" width="150" style="border-radius: 50%; border: 3px solid #ffcc00;">
     <h1>Café com Pimenta</h1>
     <nav>
       <a href="#intro">Início</a>
       <a href="#bio">BIO</a>
-      <a href="#conteudo">Conteúdo</a>
+      <a href="#categorias">Categorias</a>
     </nav>
   </header>
 
   <main>
     <section id="intro">
       <h2>Entre o Café, a Pimenta e os Astros</h2>
-      <p>No Café com Pimenta, navegamos pela precisão da Astronomia para fundamentar a profundidade da Astrologia. 
-      Acredito que observar os astros é o dado científico, mas desvendá-los em nossa vida é a chave para o autoconhecimento. 
-      Aqui, unimos o rigor do telescópio à sensibilidade da leitura astrológica: uma forma de ler o universo que vai além do que os olhos veem, alcançando o que a alma sente.</p>
+      <p>No Café com Pimenta, navegamos pela precisão da Astronomia para fundamentar a profundidade da Astrologia. Unimos o rigor do telescópio à sensibilidade da leitura astrológica.</p>
+    </section>
+
+    <section id="categorias">
+      <h2>Explore nossos Temas</h2>
+      <p>Escolha um caminho para aprofundar seu conhecimento:</p>
+      <div class="menu-categorias">
+        <a href="#astrologia" class="cat-btn">✨ Astrologia</a>
+        <a href="#astronomia" class="cat-btn">🔭 Astronomia</a>
+        <a href="#artes" class="cat-btn">🎨 Artes</a>
+        <a href="#mitologia" class="cat-btn">🏛️ Mitologia</a>
+      </div>
+    </section>
+
+    <section id="astrologia">
+      <h2>✨ Astrologia</h2>
+      <p>O estudo dos arquétipos e dos ciclos celestes. Aqui falamos sobre signos, casas astrais e como o céu do seu nascimento reflete sua jornada interna.</p>
+    </section>
+
+    <section id="astronomia">
+      <h2>🔭 Astronomia</h2>
+      <p>A base técnica. Falamos sobre a mecânica celeste, o movimento dos planetas e as maravilhas físicas do universo que observamos através das lentes.</p>
+    </section>
+
+    <section id="artes">
+      <h2>🎨 Artes</h2>
+      <p>Como o cosmos inspira a criação humana. Pinturas, músicas e literatura que tentam traduzir o infinito em expressão artística.</p>
+    </section>
+
+    <section id="mitologia">
+      <h2>🏛️ Mitologia</h2>
+      <p>As histórias por trás das constelações. Deuses, heróis e monstros que dão nome aos corpos celestes e habitam nosso imaginário.</p>
     </section>
 
     <section id="bio">
       <h2>Sobre Jaqueline Longoni</h2>
-      <h3>A mente por trás do Café com Pimenta</h3>
-      <p>O Café com Pimenta é a materialização de uma jornada que comecei há mais de 30 anos, movida por uma paixão incurável pelo céu e por seus astros brilhantes, tão cheios de incógnitas. 
-      Minha trajetória é feita de binóculos e mapas astrais. Sou uma estudiosa da Astronomia amadora, fascinada pela mecânica celeste e pelo rigor dos dados, mas foi na Astrologia que encontrei as respostas que a ciência, sozinha, não conseguia me dar.</p>
-      
-      <p>Busquei no simbolismo do céu uma compreensão sobre a existência que não encontrei de outra forma. 
-      Acredito que observar os astros é o dado científico, mas desvendá-los em nossa vida é a chave para o autoconhecimento. 
-      Aqui, unimos o rigor do telescópio à sensibilidade da leitura astrológica: uma forma de ler o universo que vai além do que os olhos veem, alcançando o que a alma sente.</p>
-    </section>
-
-    <section id="conteudo">
-      <h2>O que você encontrará aqui</h2>
-      <ul>
-        <li><strong>Café:</strong> O despertar da consciência e a pausa necessária para refletir.</li>
-        <li><strong>Pimenta:</strong> A intensidade e o tempero para encarar as verdades do destino.</li>
-        <li><strong>Astros:</strong> O mapa técnico e arquetípico que orienta nossa jornada.</li>
-        <li><strong>Vibrações:</strong> A energia invisível que harmonizamos através da Radiestesia.</li>
-      </ul>
-      <p>Seja através do estudo dos ciclos planetários ou da medição das frequências energéticas, este blog é um convite para você retomar as rédeas da sua história.</p>
+      <p>O Café com Pimenta é a materialização de uma jornada de mais de 30 anos. Sou uma estudiosa da Astronomia amadora, mas foi na Astrologia que encontrei as respostas que a ciência sozinha não dava.</p>
     </section>
   </main>
 
