@@ -2,260 +2,122 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Café com Pimenta - Astrologia e Astronomia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café com Pimenta</title>
   <style>
-    /* Fundo roxinho fofo com estrelas */
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      color: #f0f0f0;
-      background: linear-gradient(to bottom, #3a0ca3, #7209b7);
-      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #0b0b2e;
+      color: #fff;
     }
-
-    .stars {
-      width: 100%;
-      height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png');
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      animation: moveStars 60s linear infinite;
-    }
-
-    @keyframes moveStars {
-      from {background-position: 0 0;}
-      to {background-position: 10000px 10000px;}
-    }
-
-    header {
+    nav {
+      background-color: #3c1f47;
+      padding: 15px;
       text-align: center;
-      padding: 30px;
-      background: rgba(0,0,0,0.5);
     }
-
-    header h1 {
-      color: #ffcc00;
-      font-size: 2.5em;
-      margin-top: 10px;
-    }
-
     nav a {
       margin: 0 15px;
-      color: #f9f9f9;
+      color: #ffcc00;
       text-decoration: none;
       font-weight: bold;
-      text-transform: uppercase;
-      font-size: 0.9em;
     }
-
-    nav a:hover {
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+    header h1 {
+      font-size: 3em;
       color: #ffcc00;
-    }
-
-    /* Estilo para o Menu de Categorias */
-    .menu-categorias {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 20px 0;
-    }
-
-    .cat-btn {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 10px 20px;
-      border-radius: 20px;
-      border: 1px solid #ffcc00;
-      color: #ffcc00;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .cat-btn:hover {
-      background: #ffcc00;
-      color: #3a0ca3;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 30px;
-      background: rgba(0,0,0,0.4);
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-
-    h2 {
-      color: #ffcc00;
-      border-bottom: 1px solid rgba(255,204,0,0.3);
-      padding-bottom: 10px;
-    }
-
-    h3 {
-      color: #f9f9f9;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
       margin-bottom: 10px;
     }
-
-    footer {
+    header p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+    header img {
+      margin-top: 30px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+    .bio-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .bio-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .bio-text h2 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+    .bio-text p {
+      font-size: 1em;
+      color: #eee;
+      line-height: 1.6;
+    }
+    .bio-image {
+      flex: 1;
+      min-width: 250px;
       text-align: center;
-      padding: 40px;
-      background: rgba(0,0,0,0.6);
-      margin-top: 40px;
-      color: #f9f9f9;
+    }
+    .bio-image img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+    .bio-image em {
+      display: block;
+      margin-top: 10px;
+      font-style: italic;
+      color: #ffcc00;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
 
+  <!-- Menu -->
+  <nav>
+    <a href="astrologia.html">Astrologia</a>
+    <a href="ciclos.html">Ciclos</a>
+    <a href="mitologia.html">Mitologia</a>
+    <a href="bio.html">BIO</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <!-- Capa -->
   <header>
-    <img src="logo.png" alt="Logo Café com Pimenta" width="150" style="border-radius: 50%; border: 3px solid #ffcc00;">
     <h1>Café com Pimenta</h1>
-    <nav>
-  <a href="#astrologia">Astrologia</a>
-  <a href="#ciclos">Ciclos</a>
-  <a href="#bio">BIO</a>
-  <a href="#contato">Contato</a>
-</nav>
-
+    <p>Astrologia, ciclos e mitos sob um olhar único</p>
+    <img src="cafe-astrologia.png" alt="Céu estrelado com telescópio e lua">
   </header>
 
-  <main> <section id="ciclos">
-  <h2>O Senhor do Tempo: Desvendando o Ciclo de Saturno entre a Ciência e o Destino</h2>
-  <p>Da mecânica celeste ao amadurecimento da alma, entenda por que o retorno do gigante anelado é o marco mais importante da vida adulta.</p>
-
-  <p>Saturno sempre foi o guardião das fronteiras do nosso sistema solar visível a olho nu. Na astronomia, ele é o gigante gasoso adornado por um complexo sistema de anéis; na filosofia e na astrologia, ele é Cronos, o "Senhor do Tempo". O ciclo de Saturno — o tempo que o planeta leva para completar uma volta inteira ao redor do Sol — dura aproximadamente 29,5 anos terrestres. Este período não é apenas uma métrica astronômica, mas um relógio biológico e psíquico que marca as grandes transições da jornada humana.</p>
-
-  <h3>A Geometria do Tempo: Quadraturas e Oposições</h3>
-  <ul>
-    <li><strong>7-8 anos (Primeira Quadratura):</strong> A perda dos dentes de leite e o início da responsabilidade escolar.</li>
-    <li><strong>14-15 anos (Oposição):</strong> A crise da adolescência e a busca por identidade.</li>
-    <li><strong>21-22 anos (Segunda Quadratura):</strong> A entrada na vida adulta jovem, faculdade ou primeiro emprego sério.</li>
-    <li><strong>29 anos (O Retorno):</strong> A grande prestação de contas.</li>
-  </ul>
-
-  <p>No campo da radiestesia e das terapias vibracionais, Saturno ressoa com a frequência do chumbo — pesado, denso e protetor. Ele representa a estrutura óssea do corpo e a fundação de nossos projetos. Quando falamos no "Retorno de Saturno", descrevemos o momento em que o planeta volta exatamente ao mesmo ponto do céu onde estava no instante do seu nascimento. É o "batismo de fogo" da vida adulta.</p>
-
-  <h3>🌍 Exemplos Reais de Impacto do Ciclo</h3>
-  <ul>
-    <li><strong>Adele:</strong> No álbum "30", ela descreve o retorno de Saturno como um período de reconstrução.</li>
-    <li><strong>George Harrison:</strong> Aos 29 anos, viveu o fim dos Beatles e consolidou sua carreira espiritual.</li>
-    <li><strong>Mudança de Carreira:</strong> Muitos abandonam profissões técnicas para seguir terapias ou artes nesse período.</li>
-  </ul>
-
-  <p>Um dos maiores mistérios é o Hexágono de Saturno — uma tempestade persistente no polo norte com forma geométrica perfeita. Para os estudiosos da geometria sagrada, essa formação é uma evidência de que a matemática e a ordem regem o universo.</p>
-
-  <p>Ao atingirmos o segundo retorno, por volta dos 58 a 60 anos, entramos na fase da "Maestria". É o momento em que o conhecimento se transforma em sabedoria e a pressa de Cronos dá lugar à contemplação de Kairós.</p>
-
-  <p>Integrar a visão científica da sonda Cassini com a visão arquetípica do "Velho Sábio" nos torna observadores mais completos. Saturno nos convida a olhar para o céu e para dentro de nós mesmos, reconhecendo que somos feitos da mesma poeira estelar que obedece às mesmas leis de ciclo, colheita e renovação.</p>
-
-  <h4>Fontes:</h4>
-  <ul>
-    <li>NASA Solar System Exploration – solarsystem.nasa.gov</li>
-    <li>Liz Greene, "Saturno: Um Novo Olhar sobre um Velho Demônio"</li>
-    <li>Britannica Academy - The Orbit of Saturn – britannica.com</li>
-  </ul>
-</section>
-
-    <section id="intro">
-      <h2>Entre o Café, a Pimenta e os Astros</h2>
-      <p>No Café com Pimenta, navegamos pela precisão da Astronomia para fundamentar a profundidade da Astrologia. Unimos o rigor do telescópio à sensibilidade da leitura astrológica.</p>
-    </section>
-
-    <section id="categorias">
-      <h2>Explore nossos Temas</h2>
-      <p>Escolha um caminho para aprofundar seu conhecimento:</p>
-      <div class="menu-categorias">
-        <a href="#astrologia" class="cat-btn">✨ Astrologia</a>
-        <a href="#astronomia" class="cat-btn">🔭 Astronomia</a>
-        <a href="#artes" class="cat-btn">🎨 Artes</a>
-        <a href="#mitologia" class="cat-btn">🏛️ Mitologia</a>
-      </div>
-    </section>
-     <section id="astrologia">
-  <h2>Astrologia</h2>
-  <p>Aqui você encontrará reflexões, artigos e estudos sobre os signos, os planetas e seus arquétipos. 
-  É o espaço dedicado a compreender como os ciclos celestes se refletem em nossa vida cotidiana.</p>
-
-  <h3>Os Doze Signos</h3>
-  <ul>
-    <li>♈ Áries – Início, coragem e impulso.</li>
-    <li>♉ Touro – Estabilidade, prazer e matéria.</li>
-    <li>♊ Gêmeos – Comunicação, curiosidade e movimento.</li>
-    <li>♋ Câncer – Emoção, lar e proteção.</li>
-    <li>♌ Leão – Criatividade, brilho e liderança.</li>
-    <li>♍ Virgem – Organização, análise e serviço.</li>
-    <li>♎ Libra – Harmonia, beleza e relacionamentos.</li>
-    <li>♏ Escorpião – Transformação, intensidade e mistério.</li>
-    <li>♐ Sagitário – Expansão, fé e aventura.</li>
-    <li>♑ Capricórnio – Estrutura, disciplina e realização.</li>
-    <li>♒ Aquário – Inovação, coletividade e liberdade.</li>
-    <li>♓ Peixes – Sensibilidade, espiritualidade e compaixão.</li>
-  </ul>
-
-  <h3>Planetas e Arquétipos</h3>
-  <p>Cada planeta carrega uma energia simbólica: o Sol como identidade, a Lua como emoção, 
-  Mercúrio como comunicação, Vênus como afeto, Marte como ação, Júpiter como expansão e Saturno como estrutura. 
-  Aqui você poderá explorar como esses arquétipos se manifestam em diferentes fases da vida.</p>
-</section>
-
-    <section id="astrologia">
-      <h2>✨ Astrologia: O Senhor do Tempo</h2>
-      <p>A Astrologia é a linguagem dos astros que traduz os ciclos da nossa alma. Um dos movimentos mais poderosos que estudamos aqui é o de <strong>Saturno</strong>, o arquiteto do destino.</p>
-      
-      <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-left: 4px solid #ffcc00; margin-top: 20px;">
-        <h3>🪐 O Ciclo de Saturno e a Estrutura do Real</h3>
-        <p>Saturno em seu domicílio (Capricórnio) representa o ápice da estrutura e da autoridade. Ele é o guardião dos limites e aquele que sustenta os sistemas rígidos.</p>
-        <ul>
-          <li><strong>O Guardião:</strong> Quando Saturno está forte, ele mantém as fronteiras e a ordem.</li>
-          <li><strong>O Colapso:</strong> Quando Saturno encerra um ciclo em seu próprio signo, não se trata de uma simples reforma, mas sim de um fim histórico.</li>
-          <li><strong>A Lição:</strong> Ele ensina que os sistemas caem pelas suas próprias regras quando a maturidade exige uma nova fundação.</li>
-        </ul>
-        <p><em>"O Muro cai quando os planetas dizem que acabou. A História apenas obedece."</em></p>
-      </div>
-    </section>
-
-    <section id="astronomia">
-      <h2>🔭 Astronomia</h2>
-      <p>A base técnica. Falamos sobre a mecânica celeste, o movimento dos planetas e as maravilhas físicas do universo que observamos através das lentes.</p>
-    </section>
-
-    <section id="artes">
-      <h2>🎨 Artes</h2>
-      <p>Como o cosmos inspira a criação humana. Pinturas, músicas e literatura que tentam traduzir o infinito em expressão artística.</p>
-    </section>
-
-    <section id="mitologia">
-      <h2>🏛️ Mitologia</h2>
-      <p>As histórias por trás das constelações. Deuses, heróis e monstros que dão nome aos corpos celestes e habitam nosso imaginário.</p>
-    </section>
-
-<section id="bio">
-  <h2>Sobre Jaqueline Longoni</h2>
-  <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-    <img src="definitiva.png" alt="Jaqueline Longoni - Café com Pimenta" width="280" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-    <div>
+  <!-- Sobre Jaqueline Longoni -->
+  <section class="bio-section">
+    <div class="bio-text">
+      <h2>Sobre Jaqueline Longoni – autora deste site</h2>
       <p>O Café com Pimenta é a materialização de uma jornada que comecei há mais de 30 anos, movida por uma paixão incurável pelo céu e por seus astros brilhantes, tão cheios de incógnitas.</p>
       <p>Minha trajetória é feita de binóculos e mapas astrais. Sou uma estudiosa da Astronomia amadora, fascinada pela mecânica celeste e pelo rigor dos dados, mas foi na Astrologia que encontrei as respostas que a ciência, sozinha, não conseguia me dar.</p>
       <p>Busquei no simbolismo do céu uma compreensão sobre a existência que não encontrei de outra forma. Acredito que observar os astros é o dado científico, mas desvendá-los em nossa vida é a chave para o autoconhecimento.</p>
     </div>
-  </div>
-</section>
+    <div class="bio-image">
+      <img src="definitiva.png" alt="Jaqueline Longoni - Café com Pimenta">
+      <em>Jaqueline Longoni, autora do Café com Pimenta</em>
+    </div>
+  </section>
+
+</body>
+</html>
+
 
 
 
