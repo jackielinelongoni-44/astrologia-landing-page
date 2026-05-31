@@ -4,55 +4,114 @@
   <meta charset="UTF-8">
   <title>Artes - Café com Pimenta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Fontes místicas e medievais legíveis -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Georgia&display=swap" rel="stylesheet">
+
   <style>
-    /* Mantendo a identidade visual do Café com Pimenta */
-    body {
+    html, body {
       margin: 0; 
       font-family: 'Georgia', serif; 
       color: #f0f0f0;
-      background: linear-gradient(to bottom, #3a0ca3, #7209b7);
+      background: radial-gradient(circle at center, #2e0854 0%, #110022 100%);
+      min-height: 100vh;
       overflow-x: hidden;
+      /* Cursor de Estrelinha Dourada */
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffcc00' d='M12,2L14.4,9.6L22,12L14.4,14.4L12,22L9.6,14.4L2,12L9.6,9.6Z'/%3E%3C/svg%3E") 12 12, auto;
     }
-    .stars {
-      width: 100%; 
-      height: 100%; 
-      position: fixed; 
+
+    /* O BG Místico com Constelações */
+    .bg-mistico {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
       z-index: -1;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-image: 
+        url('https://www.transparenttextures.com/patterns/stardust.png'),
+        url('https://api.iconify.design/bi:stars.svg?color=%23ffffff33'), 
+        url('https://api.iconify.design/gis:constellation.svg?color=%23ffcc001a');
+      background-size: auto, 300px 300px, 600px 600px;
+      opacity: 0.85;
     }
+
     header { 
       text-align: center; 
       padding: 20px; 
-      background: rgba(0,0,0,0.5); 
+      background: rgba(12, 3, 25, 0.7);
+      border-bottom: 1px solid rgba(255, 204, 0, 0.2);
     }
+
+    .titulo-medieval-menor {
+      font-family: 'Cinzel Decorative', serif;
+      color: #ffcc00;
+      font-size: 2em;
+      text-shadow: 0 0 10px rgba(255, 204, 0, 0.6), 2px 2px 4px #000;
+    }
+
     nav a { 
       margin: 0 15px; 
       color: #ffcc00; 
       text-decoration: none; 
       font-weight: bold; 
     }
+
     main { 
       max-width: 800px; 
       margin: 40px auto; 
       padding: 30px; 
-      background: rgba(0,0,0,0.4); 
+      background: rgba(12, 3, 25, 0.6);
       border-radius: 15px; 
+      border: 1px solid rgba(255, 204, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
     }
-    h1, h2, h3 { 
+
+    h2 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.4em;
       color: #ffcc00; 
     }
+
     .voltar { 
       display: inline-block; 
       margin-top: 20px; 
       color: #fff; 
       text-decoration: underline; 
     }
+
+    .voltar:hover {
+      color: #ffcc00;
+      cursor: inherit;
+    }
+
+    /* CSS do Pó de Ouro */
+    .po-de-ouro {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffffff 0%, #ffcc00 60%, #ff9900 100%);
+      box-shadow: 0 0 6px #ffcc00, 0 0 10px #ff9900, 0 0 2px #ffffff;
+      pointer-events: none;
+      z-index: 9999;
+      animation: queimarPo 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+
+    @keyframes queimarPo {
+      0% { opacity: 1; transform: scale(1) translate(0, 0); }
+      100% { opacity: 0; transform: scale(0.1) translate(var(--mx), var(--my)); }
+    }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
+  <div class="bg-mistico"></div>
+  
   <header>
-    <h1>Café com Pimenta</h1>
+    <div class="titulo-medieval-menor">Café com Pimenta</div>
     <nav>
       <a href="index.html">Voltar ao Início</a>
     </nav>
@@ -69,5 +128,26 @@
 
     <a href="index.html" class="voltar">← Voltar para a página principal</a>
   </main>
+
+  <!-- Script essencial do rastro de ouro -->
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      for (let i = 0; i < 2; i++) {
+        let grao = document.createElement('div');
+        grao.className = 'po-de-ouro';
+        grao.style.left = (e.clientX) + 'px';
+        grao.style.top = (e.clientY) + 'px';
+        let tamanho = Math.random() * 5 + 2;
+        grao.style.width = tamanho + 'px';
+        grao.style.height = tamanho + 'px';
+        let movimentoX = (Math.random() - 0.5) * 30;
+        let movimientoY = (Math.random() * 30) + 10;
+        grao.style.setProperty('--mx', movimientoX + 'px');
+        grao.style.setProperty('--my', movimientoY + 'px');
+        document.body.appendChild(grao);
+        setTimeout(() => { grao.remove(); }, 700);
+      }
+    });
+  </script>
 </body>
 </html>
