@@ -85,6 +85,7 @@
       cursor: inherit;
     }
 
+    /* Elementos do Pó de Ouro */
     .po-de-ouro {
       position: fixed;
       width: 5px;
@@ -105,6 +106,7 @@
 </head>
 <body>
   <div class="bg-mistico"></div>
+  
   <header>
     <div class="titulo-medieval-menor">Café com Pimenta</div>
     <nav>
@@ -119,7 +121,7 @@
     <div style="border-left: 4px solid #ffcc00; padding-left: 20px; margin: 20px 0; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 0 10px 10px 0;">
       <h3>🌌 A Âncora da Realidade Celeste</h3>
       <p>Entender a posição real dos corpos celestes no espaço é o primeiro passo para qualquer conexão profunda com o universo. Sem o rigor do telescópio e o dado científico observável, o conhecimento perde sua base sólida.</p>
-      <p>Unimos a observation técnica dos fenômenos espaciais ao maravilhamento de saber do que o universo é feito. É a ciência que nos permite manter os pés no chão enquanto os olhos vasculham o infinito.</p>
+      <p>Unimos a observação técnica dos fenômenos espaciais ao maravilhamento de saber do que o universo é feito. É a ciência que nos permite manter os pés no chão enquanto os olhos vasculham o infinito.</p>
     </div>
 
     <a href="index.html" class="voltar">← Voltar para a página principal</a>
@@ -130,15 +132,15 @@
       for (let i = 0; i < 2; i++) {
         let grao = document.createElement('div');
         grao.className = 'po-de-ouro';
-        grao.style.left = (e.clientX) + 'px';
-        grao.style.top = (e.clientY) + 'px';
+        grao.style.left = e.clientX + 'px';
+        grao.style.top = e.clientY + 'px';
         let tamanho = Math.random() * 5 + 2;
         grao.style.width = tamanho + 'px';
         grao.style.height = tamanho + 'px';
         let movimentoX = (Math.random() - 0.5) * 30;
         let movimientoY = (Math.random() * 30) + 10;
         grao.style.setProperty('--mx', movimentoX + 'px');
-        grao.style.setProperty('--my', movimentoY + 'px');
+        grao.style.setProperty('--my', movimientoY + 'px');
         document.body.appendChild(grao);
         setTimeout(() => { grao.remove(); }, 700);
       }
