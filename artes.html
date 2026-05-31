@@ -47,13 +47,25 @@
       color: #ffcc00;
       font-size: 2em;
       text-shadow: 0 0 10px rgba(255, 204, 0, 0.6), 2px 2px 4px #000;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a { 
-      margin: 0 15px; 
-      color: #ffcc00; 
+      margin: 0 10px; 
+      color: #f0f0f0; 
       text-decoration: none; 
-      font-weight: bold; 
+      font-weight: bold;
+      font-size: 0.9em;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.ativo {
+      color: #ffcc00;
+      text-shadow: 0 0 8px #ffcc00;
     }
 
     main { 
@@ -108,8 +120,13 @@
   
   <header>
     <div class="titulo-medieval-menor">Café com Pimenta</div>
+    <!-- Novo Menu Unificado Interligando Todo o Site -->
     <nav>
-      <a href="index.html">Voltar ao Início</a>
+      <a href="index.html">🏠 Início</a> | 
+      <a href="astrologia.html">✨ Astrologia</a> | 
+      <a href="astronomia.html">🔭 Astronomia</a> | 
+      <a href="mitologia.html">🏛️ Mitologia</a> | 
+      <a href="artes.html" class="ativo">🎨 Artes</a>
     </nav>
   </header>
 
