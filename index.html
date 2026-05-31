@@ -49,7 +49,6 @@
       font-family: 'Cinzel Decorative', serif;
       color: #ffcc00;
       font-size: 3em;
-      margin-top: 10px;
       text-shadow: 0 0 15px rgba(255, 204, 0, 0.8), 2px 2px 4px #000;
       letter-spacing: 3px;
     }
@@ -143,22 +142,20 @@
 
     @keyframes queimarPo {
       0% { opacity: 1; transform: scale(1) translate(0, 0); }
-      50% { opacity: 0.8; }
       100% { opacity: 0; transform: scale(0.1) translate(var(--mx), var(--my)); }
     }
   </style>
 </head>
 <body>
-  <!-- Camada do novo fundo místico com constelações -->
+  <!-- Camada do fundo místico com constelações -->
   <div class="bg-mistico"></div>
 
   <header>
-    <img src="logo.png" alt="Logo Café com Pimenta" width="150" style="border-radius: 50%; border: 3px solid #ffcc00; box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);">
     <div class="titulo-medieval">Café com Pimenta</div>
     <nav>
       <a href="#intro">Início</a>
-      <a href="#bio">BIO</a>
       <a href="#categorias">Categorias</a>
+      <a href="#bio">BIO</a>
     </nav>
   </header>
 
@@ -168,6 +165,7 @@
       <p>No Café com Pimenta, navegamos pela precisão da Astronomia para fundamentar a profundidade da Astrologia. Unimos o rigor do telescópio à sensibilidade da leitura astrológica.</p>
     </section>
 
+    <!-- Seção de Categorias Corrigida com as tags HTML corretas -->
     <section id="categorias">
       <h2>Explore nossos Temas</h2>
       <p>Escolha um caminho para abrir uma nova página de conhecimento:</p>
@@ -192,23 +190,18 @@
   <!-- Script da Varinha: Gera o rastro de pó de ouro realista -->
   <script>
     document.addEventListener('mousemove', function(e) {
-      // Ajuste para criar o rastro contínuo e mágico
       for (let i = 0; i < 2; i++) {
         let grao = document.createElement('div');
         grao.className = 'po-de-ouro';
-        
-        // Posiciona exatamente na ponta da estrelinha do cursor
         grao.style.left = (e.clientX) + 'px';
         grao.style.top = (e.clientY) + 'px';
         
-        // Tamanhos variados para parecer pó real
         let tamanho = Math.random() * 5 + 2;
         grao.style.width = tamanho + 'px';
         grao.style.height = tamanho + 'px';
         
-        // Sorteia uma direção de dispersão para o pó flutuar antes de sumir
         let movimentoX = (Math.random() - 0.5) * 30;
-        let movimentoY = (Math.random() * 30) + 10; // cai de leve como gravidade
+        let movimentoY = (Math.random() * 30) + 10; 
         grao.style.setProperty('--mx', movimentoX + 'px');
         grao.style.setProperty('--my', movimentoY + 'px');
         
