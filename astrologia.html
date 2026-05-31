@@ -47,13 +47,25 @@
       color: #ffcc00;
       font-size: 2em;
       text-shadow: 0 0 10px rgba(255, 204, 0, 0.6), 2px 2px 4px #000;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a { 
-      margin: 0 15px; 
-      color: #ffcc00; 
+      margin: 0 10px; 
+      color: #f0f0f0; 
       text-decoration: none; 
-      font-weight: bold; 
+      font-weight: bold;
+      font-size: 0.9em;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.ativo {
+      color: #ffcc00;
+      text-shadow: 0 0 8px #ffcc00;
     }
 
     main { 
@@ -85,7 +97,6 @@
       cursor: inherit;
     }
 
-    /* CSS do Pó de Ouro */
     .po-de-ouro {
       position: fixed;
       width: 5px;
@@ -110,7 +121,11 @@
   <header>
     <div class="titulo-medieval-menor">Café com Pimenta</div>
     <nav>
-      <a href="index.html">Voltar ao Início</a>
+      <a href="index.html">🏠 Início</a> | 
+      <a href="astrologia.html" class="ativo">✨ Astrologia</a> | 
+      <a href="astronomia.html">🔭 Astronomia</a> | 
+      <a href="mitologia.html">🏛️ Mitologia</a> | 
+      <a href="artes.html">🎨 Artes</a>
     </nav>
   </header>
 
@@ -128,7 +143,6 @@
     <a href="index.html" class="voltar">← Voltar para a página principal</a>
   </main>
 
-  <!-- Script essencial do rastro -->
   <script>
     document.addEventListener('mousemove', function(e) {
       for (let i = 0; i < 2; i++) {
@@ -140,9 +154,9 @@
         grao.style.width = tamanho + 'px';
         grao.style.height = tamanho + 'px';
         let movimentoX = (Math.random() - 0.5) * 30;
-        let movimientoY = (Math.random() * 30) + 10;
+        let movimentoY = (Math.random() * 30) + 10;
         grao.style.setProperty('--mx', movimentoX + 'px');
-        grao.style.setProperty('--my', movimientoY + 'px');
+        grao.style.setProperty('--my', movimentoY + 'px');
         document.body.appendChild(grao);
         setTimeout(() => { grao.remove(); }, 700);
       }
